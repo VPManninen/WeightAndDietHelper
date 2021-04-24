@@ -7,39 +7,237 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="353dp"
-        android:layout_height="224dp"
-        android:text="TextView"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
-
-    <EditText
-        android:id="@+id/editField"
-        android:layout_width="351dp"
-        android:layout_height="77dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Type here:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/nameView"
+        android:id="@+id/userText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Display Text"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:text="Logged in as: *user*"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <TextView
+        android:id="@+id/wtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userText"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/compCurr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wtext"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/compPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compared to previous:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightCur"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/bmiFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compFirst"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/bmiTextHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="BMI:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toEndOf="@+id/wtext"
+        app:layout_constraintTop_toBottomOf="@+id/userText"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/bmiCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toEndOf="@+id/weightCur"
+        app:layout_constraintTop_toBottomOf="@+id/compCurr"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/weightPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compPrev"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/bmiPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/weightPrev"
+        app:layout_constraintTop_toBottomOf="@+id/compPrev"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/consumptText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food CO2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/bmiTextHome"
+        app:layout_constraintTop_toBottomOf="@+id/userText"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/foodCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toEndOf="@+id/bmiCur"
+        app:layout_constraintTop_toBottomOf="@+id/compCurr"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/foodPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toEndOf="@+id/bmiPrev"
+        app:layout_constraintTop_toBottomOf="@+id/compPrev"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/foodFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toEndOf="@+id/bmiFirst"
+        app:layout_constraintTop_toBottomOf="@+id/compFirst"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To enter above data: \n - Open drawer menu \n - Change profile data \n - Update the values and hit 'Submit'"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <TextView
+        android:id="@+id/infoText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='BMI is calculated automatically. \n CO2 consumption is calculated using: \n "Swagger UI, FoodCalculator"'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoText"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back! \n Remember to update your data :)"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightFirst"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/weightCur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compCurr"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/weightFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NaN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compFirst"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/compFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compared to first:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightPrev"
+        app:layout_constraintVertical_bias="0.066" />
 </androidx.constraintlayout.widget.ConstraintLayout>

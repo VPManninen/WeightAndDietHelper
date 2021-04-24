@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI Calculator:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <TextView
+        android:id="@+id/bmiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Your current BMI: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/changeText"
+        android:layout_width="275dp"
+        android:layout_height="26dp"
+        android:text="Weight needed for Selected BMI:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiSeek"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <SeekBar
+        android:id="@+id/bmiSeek"
+        android:layout_width="209dp"
+        android:layout_height="21dp"
+        android:max="6000"
+        android:min="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiText"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/thisMeanField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which means you are:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bmiSeek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiText"
+        app:layout_constraintVertical_bias="0.532" />
+
+    <TextView
+        android:id="@+id/BMIValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*error*"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/thisMeanField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toEndOf="@+id/bmiText"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:id="@+id/seekValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*error*"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/changeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toEndOf="@+id/bmiSeek"
+        app:layout_constraintTop_toBottomOf="@+id/thisMeanField"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/seekResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*error*"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeText"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change from current weight: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekResult"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/seekChangeres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*error*"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/seekResult"
+        app:layout_constraintVertical_bias="0.15" />
+</androidx.constraintlayout.widget.ConstraintLayout>
