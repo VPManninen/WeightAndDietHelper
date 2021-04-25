@@ -17,7 +17,7 @@ import com.example.OlioHT.R;
 public class AboutFragment extends Fragment {
 
     /* This fragment contains all code required to show information on "About" -view
-    * String constant for "TextView" component is all there is*/
+    * String constant for "TextView" component is all there is */
 
     private View view;
     private IFragmentOwner fragmentOwner;
