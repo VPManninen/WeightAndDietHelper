@@ -53,7 +53,7 @@ public class DataHandler {
     public Data getPrevFood() {
         // returns the previous (as stated in getPrevData()) non zero CO2 consumption entry
         if ((userData != null) && (userData.size() > 1)) {
-            for (int i = userData.size() - 2; i > 0; i--) {
+            for (int i = userData.size() - 2; i >= 0; i--) {
                 if (userData.get(i).getApi() != 0) {
                     return userData.get(i);
                 }

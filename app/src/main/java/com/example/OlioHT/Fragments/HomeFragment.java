@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
         if (first != null) {
             double weightValF = latest.getWeight() - first.getWeight();
             double bmiValF = latest.getBmi() - first.getBmi();
-            double foodValF = 0;
+            double foodValF;
             firstText.setText(String.format("Compared to first (%s):", first.getDate()));
             weightF.setText(String.format("%.1f kg", weightValF));
             bmiF.setText(String.format("%.1f kg/m^2", bmiValF));
@@ -115,6 +115,7 @@ public class HomeFragment extends Fragment {
                 foodValF = latest.getApi() - DataHandler.getInstance().getFirstFood().getApi();
                 foodF.setText(String.format("%.2f kg/year", foodValF));
             } else {
+                foodValF = 0;
                 foodF.setText("Today's data missing");
             }
             if (weightValF > 0) {
@@ -130,22 +131,23 @@ public class HomeFragment extends Fragment {
             if (foodValF > 0) {
                 foodF.setTextColor(Color.RED);
             } else {
-                bmiF.setTextColor(Color.GREEN);
+                foodF.setTextColor(Color.GREEN);
             }
         }
 
         if (previous != null) {
             double weightValP = latest.getWeight() - previous.getWeight();
             double bmiValP = latest.getBmi() - previous.getBmi();
-            double foodValP = 0;
+            double foodValP;
             prevText.setText(String.format("Compared to previous (%s):", previous.getDate()));
             weightP.setText(String.format("%.1f kg", weightValP));
             bmiP.setText(String.format("%.1f kg/m^2", bmiValP));
-            if (latest.getApi() != 0) {
+            if ((latest.getApi() != 0) && (DataHandler.getInstance().getPrevFood() != null)) {
                 foodValP = latest.getApi() - DataHandler.getInstance().getPrevFood().getApi();
                 foodP.setText(String.format("%.2f kg/year", foodValP));
             } else {
-                foodP.setText("Today's data missing");
+                foodValP = 0;
+                foodP.setText("Comparison \n data missing");
             }
             if (weightValP > 0) {
                 weightP.setTextColor(Color.RED);
@@ -160,7 +162,7 @@ public class HomeFragment extends Fragment {
             if (foodValP > 0) {
                 foodP.setTextColor(Color.RED);
             } else {
-                bmiP.setTextColor(Color.GREEN);
+                foodP.setTextColor(Color.GREEN);
             }
         }
 

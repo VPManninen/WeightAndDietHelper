@@ -25,7 +25,7 @@ public class AboutFragment extends Fragment {
     private TextView aboutText;
 
     private static final String ABOUT = "Olio-ohjelmointi Harjoitustyö: Weight and Diet helper \n" +
-            "Ville-Petteri Manninen 24.04.2020 \n \n" +
+            "Ville-Petteri Manninen 25.04.2021 \n \n" +
             "Application collects following user input data: \n" +
             "\t - name \n" +
             "\t - weight \n" +
