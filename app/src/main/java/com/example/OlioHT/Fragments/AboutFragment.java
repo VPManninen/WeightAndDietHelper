@@ -30,7 +30,7 @@ public class AboutFragment extends Fragment {
             "\t - name \n" +
             "\t - weight \n" +
             "\t - height \n" +
-            "\t - body mass index (BMI) \n" +
+            "\t - body mass index (BMI)  \n" +
             "\t - Food consumption habits (CO2) \n" +
             "All data collected is stored into a local SQLite database. \n" +
             "If you wish to get remove all data stored: \n" +
