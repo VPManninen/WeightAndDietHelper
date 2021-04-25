@@ -36,7 +36,7 @@ public class AboutFragment extends Fragment {
             "If you wish to get remove all data stored: \n" +
             "Delete: Data/Data/com.example.OlioHT/databases \n \n" +
             "Food consumption is calculated using a public API \n" +
-            "Provided by: SYKE Climate Diet public API 1.0 \n" +
+            "Provided by: SYKE Climate Diet public API 1.0  \n" +
             "https://ilmastodieetti.ymparisto.fi/ilmastodieetti/swagger/ui/index#!/ConsumptionCalculator/ConsumptionCalculator_Get";
 
     @Override
