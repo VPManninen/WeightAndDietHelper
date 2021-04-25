@@ -16,7 +16,7 @@ public class ApiHandler {
 
     private static ApiHandler handler = new ApiHandler();
     // diet has been hard coded to be "omnivore" as total calculator has minor difference in base values between the 3 options.
-    // as vegans/vegetarians can leave meat/fish etc to be 0.
+    //  as vegans/vegetarians can leave meat/fish etc to be 0.
     private static final String API_URL = "https://ilmastodieetti.ymparisto.fi/ilmastodieetti/calculatorapi/v1/FoodCalculator?query.diet=omnivore";
 
     private ApiHandler() {
